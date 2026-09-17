@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Doctor — SEO & AI Search Audit</title>
+  <meta name="description" content="Open-source technical SEO, website health and AI-search readiness auditor." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <span class="eyebrow">OPEN-SOURCE WEBSITE AUDITOR</span>
+      <h1>Website Doctor</h1>
+      <p>Find technical SEO, on-page, schema, crawlability, security and AI-search issues — with evidence and recommended fixes.</p>
+      <form id="auditForm" class="audit-form">
+        <input id="url" name="url" type="url" placeholder="https://example.com" required />
+        <button type="submit">Run audit</button>
+      </form>
+      <p id="status" class="status"></p>
+    </header>
+
+    <section id="results" class="hidden">
+      <div class="summary-grid">
+        <article class="score-card"><span>Overall</span><strong id="overall">—</strong><small>/100</small></article>
+        <article><span>Critical</span><strong id="critical">0</strong></article>
+        <article><span>High</span><strong id="high">0</strong></article>
+        <article><span>Medium</span><strong id="medium">0</strong></article>
+        <article><span>Low</span><strong id="low">0</strong></article>
+      </div>
+      <div id="categoryScores" class="category-grid"></div>
+      <div class="section-head"><h2>Issues</h2><div id="filters"></div></div>
+      <div id="issues" class="issues"></div>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
